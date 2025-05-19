@@ -1,6 +1,8 @@
 *.sln
 .vsconfig
+.vs/
 UserSettings/
 Library/
 Logs/
 Temp/
+obj

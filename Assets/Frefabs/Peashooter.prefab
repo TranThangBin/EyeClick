@@ -478,6 +478,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4389950493629246545}
+  - component: {fileID: 3057308985185389748}
   m_Layer: 0
   m_Name: Peashooter
   m_TagString: Untagged
@@ -502,6 +503,18 @@ Transform:
   - {fileID: 667701158605670985}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3057308985185389748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6303757165415244012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09d126c6e41f28c48a1d86bc603e3882, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7523001668970593825
 GameObject:
   m_ObjectHideFlags: 0

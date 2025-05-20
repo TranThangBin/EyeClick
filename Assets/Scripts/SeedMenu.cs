@@ -2,20 +2,32 @@ using UnityEngine;
 
 public class SeedMenu : MonoBehaviour
 {
-    private SeedPacket[] _seedPackets;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public Plant[] Plants;
+
+    [SerializeField] private Lawn _lawn;
+
+    private Grid<Plant> _grid;
+    private string _selectedPlant;
+
+    private void Start()
     {
-        _seedPackets = GetComponentsInChildren<SeedPacket>();
-        for (int i = 0; i < _seedPackets.Length; i++)
-        {
-            Debug.Log(_seedPackets[i].Plant);
-        }
+        _grid = new Grid<Plant>(Plants.Length, 1, 20, 10, transform.position, (i, _) => Plants[i], true);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    Vector2 mouseWorldPostion = Utils.GetMouseWorldPosition();
+        //    string selectedPlant = _grid.GetCellValue(mouseWorldPostion);
+        //    if (!string.IsNullOrEmpty(selectedPlant))
+        //    {
+        //        _selectedPlant = selectedPlant;
+        //    }
+        //    else if (!string.IsNullOrEmpty(_selectedPlant) && _lawn.SetPlant(mouseWorldPostion, _selectedPlant))
+        //    {
+        //        _selectedPlant = string.Empty;
+        //    }
+        //}
     }
 }

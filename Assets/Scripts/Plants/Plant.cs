@@ -5,6 +5,7 @@ namespace Game
     public abstract class Plant : MonoBehaviour, ISelectable
     {
         [SerializeField] private int _plantCost;
+
         public bool ActionOnLocation(Transform location, SunManager sunManager)
         {
             if (!CanSelect(sunManager) || location.GetComponentInChildren<Plant>() != null)

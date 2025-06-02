@@ -15,11 +15,6 @@ namespace Game
         private readonly Vector3[] _directions = new Vector3[] { Vector3.right, Vector3.left, Vector3.left };
         private readonly float[] _shootWaitTime = new float[] { 0.5f, 0.25f, 0.25f };
 
-        private void Start()
-        {
-            _rechargeTimer.TimerStart();
-        }
-
         private void Update()
         {
             switch (_state)
@@ -43,6 +38,10 @@ namespace Game
                     }
                     break;
                 case SplitPeashooterState.COOLDOWN:
+                    if (_rechargeTimer.TimerIsStopped())
+                    {
+                        _rechargeTimer.TimerStart();
+                    }
                     break;
                 default:
                     throw new UnityException();

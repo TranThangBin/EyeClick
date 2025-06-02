@@ -9,7 +9,7 @@ namespace Game
             return true;
         }
 
-        public bool ActionOnLocation(Transform location, SunManager sunManager)
+        public bool ActionOnLocation(Transform location, SunManager _)
         {
             Plant plant = location.GetComponentInChildren<Plant>();
 
